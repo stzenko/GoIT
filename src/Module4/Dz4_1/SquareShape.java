@@ -10,15 +10,15 @@ public class SquareShape {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
-        double lengthA, lengthB, areaTriangle, areaRectangle, radiusRange, pi = 3.14, areaCircle;
+        double lengthA, lengthB, areaTriangle, areaRectangle, radiusRange, areaCircle;
         // Area of a right triangle
-        System.out.print("Storona A ");
+        System.out.print("Side A ");
         if (scanner.hasNextDouble()) {
             lengthA = scanner.nextDouble();
             if (lengthA==0){
                 return;}
             {
-            System.out.print("Storona B ");}
+            System.out.print("Side B ");}
 
             lengthB = scanner.nextDouble();
             if (lengthB==0){
@@ -35,12 +35,12 @@ public class SquareShape {
         }
 
         // Area of a rectangle
-        System.out.print("Storona AB ");
+        System.out.print("Side AB ");
         if (scanner.hasNextDouble()) {
             lengthA = scanner.nextDouble();
             if (lengthA==0){
                 return ;}
-            System.out.print("Storona BC ");
+            System.out.print("Side BC ");
             lengthB = scanner.nextDouble();
             if (lengthB==0){
                 return ;}
@@ -60,7 +60,7 @@ public class SquareShape {
             radiusRange = scanner.nextDouble();
             if (radiusRange==0){
                 return ;}
-            areaCircle = pi * Math.pow(radiusRange, 2);
+            areaCircle = Math.PI * Math.pow(radiusRange, 2);
             System.out.println("Area of a circle = " + areaCircle);
         }
         else {
