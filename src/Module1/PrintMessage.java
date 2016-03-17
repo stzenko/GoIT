@@ -1,4 +1,4 @@
-package Module1;
+package module1;
 
 /*
  * Вивід текста на екран.

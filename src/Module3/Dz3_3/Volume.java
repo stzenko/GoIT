@@ -1,4 +1,4 @@
-package Module3.Dz3_3;
+package module3.dz3_3;
 /**
  * Created by Zenovii on 08.03.2016.
  */

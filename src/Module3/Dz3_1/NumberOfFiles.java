@@ -1,4 +1,4 @@
-package Module3.Dz3_1;
+package module3.dz3_1;
 
 
 /**

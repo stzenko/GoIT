@@ -1,4 +1,4 @@
-package Module4.Dz4_1;
+package module4.dz4_1;
 
 /**
  * Created by Zenovii on 10.03.2016.
