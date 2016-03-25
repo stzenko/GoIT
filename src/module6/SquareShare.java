@@ -22,25 +22,38 @@ public class SquareShare {
         // Area of a right triangle
         SquareShare squareShare = new SquareShare();
 
-        Scanner scanner= new Scanner(System.in);
-        {
-        System.out.print("Enter Side A ");
-            double lengthA = scanner.nextDouble();
-
-        System.out.print("Enter Side B ");
-            double lengthB = scanner.nextDouble();
-
-
-        double areaTriangle=squareShare.areaTriangle(lengthA,lengthB);
-        System.out.println("Area of a right triangle " + areaTriangle);
-        }
-
-        // Area of a rectangle
+        Scanner scanner = new Scanner(System.in);
         {
             System.out.print("Enter Side A ");
-            double lengthA = scanner.nextDouble();
+            String lengthA = scanner.next();
+            try {
+                double SiteA = Double.parseDouble(lengthA);
+            } catch (NumberFormatException ex) {
+                System.out.println("Enter number");
+            }
+
             System.out.print("Enter Side B ");
-            double lengthB = scanner.nextDouble();
+            String lengthB = scanner.next();
+
+
+            try {double SiteB = Double.parseDouble(lengthB);
+
+            } catch (NumberFormatException ex) {
+                System.out.printf("Enter number");
+
+            }
+            double areaTriangle = squareShare.areaTriangle(lengthA, lengthB);
+            System.out.println("Area of a right triangle " + areaTriangle);
+        }
+
+    }
+}
+        /* Area of a rectangle
+        {
+            System.out.print("Enter Side A ");
+            String lengthA = scanner.next();
+            System.out.print("Enter Side B ");
+            String lengthB = scanner.next();
             double areaRectangle = squareShare.areaRectangle(lengthA, lengthB);
             System.out.println("Area of a rectangle = " + areaRectangle);
         }
@@ -48,10 +61,11 @@ public class SquareShare {
         // Area of a circle
         {
         System.out.print("Enter radius circle");
-        double radiusRange = scanner.nextDouble();
-        double areaCircle = squareShare.areaCircle(radiusRange);
+            String radiusRange = scanner.next();
+            double areaCircle = squareShare.areaCircle(radiusRange);
         System.out.println("Area of a circle =" + areaCircle);
 
         }
     }
 }
+*/
