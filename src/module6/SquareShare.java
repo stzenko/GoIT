@@ -1,16 +1,14 @@
 package module6;
 
-import com.sun.org.apache.xerces.internal.impl.xpath.regex.Match;
-
 import java.util.Scanner;
 
 /**
  * Created by Zenovii on 24.03.2016.
  */
 public class SquareShare {
-    public double areaTriangle(double lengthA, double lengthB){
-        return  (lengthA * lengthB) /  2;
-    }
+    //public double areaTriangle(double lengthA, double lengthB){
+      //  return  (lengthA * lengthB) /  2;
+   // }
     public double areaRectangle(double lengthA,double lengthB){
         return  lengthA * lengthB;
     }
@@ -24,29 +22,36 @@ public class SquareShare {
 
         Scanner scanner = new Scanner(System.in);
         {
-            System.out.print("Enter Side A ");
+            System.out.print("Enter Side A = ");
             String lengthA = scanner.next();
-            try {
-                double SiteA = Double.parseDouble(lengthA);
-            } catch (NumberFormatException ex) {
-                System.out.println("Enter number");
-            }
 
-            System.out.print("Enter Side B ");
-            String lengthB = scanner.next();
+             try {
+                 double siteA = Double.parseDouble(lengthA);
+
+                 if (siteA <= 0) {
+                     try {
+                         throw new InputErrorExeption(siteA);
+                     } catch (InputErrorExeption inputErrorExeption) {
+                         System.out.println("Enter to Number > 0 ");
+                     }
 
 
-            try {double SiteB = Double.parseDouble(lengthB);
+                 }
+                 String lengthB = scanner.next();
+                 double siteB = Double.parseDouble(lengthB);
+                 double areaTriangle = (siteA * siteB) /  2;
+                 System.out.println("Area of a right triangle " + areaTriangle);
 
-            } catch (NumberFormatException ex) {
-                System.out.printf("Enter number");
+             }
+             catch (NumberFormatException ex){
+                 System.out.println("Error, enter to Number");
+             }
 
-            }
-            double areaTriangle = squareShare.areaTriangle(lengthA, lengthB);
-            System.out.println("Area of a right triangle " + areaTriangle);
         }
 
     }
+
+
 }
         /* Area of a rectangle
         {
