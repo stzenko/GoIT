@@ -6,53 +6,62 @@ import java.util.Scanner;
  * Created by Zenovii on 24.03.2016.
  */
 public class SquareShare {
-    //public double areaTriangle(double lengthA, double lengthB){
-      //  return  (lengthA * lengthB) /  2;
-   // }
-    public double areaRectangle(double lengthA,double lengthB){
-        return  lengthA * lengthB;
+    public double areaTriangle(double lengthA, double lengthB) {
+        return (lengthA * lengthB) / 2;
     }
-    public double areaCircle(double radiusRange){
-        return Math.PI*radiusRange;
-    }
+    // public double areaRectangle(double lengthA,double lengthB){
+    //   return  lengthA * lengthB;
+    //   }
+    //  public double areaCircle(double radiusRange){
+    //      return Math.PI*radiusRange;
+    //  }
 
     public static void main(String[] args) {
         // Area of a right triangle
         SquareShare squareShare = new SquareShare();
 
         Scanner scanner = new Scanner(System.in);
-        {
+
+
+        try {
             System.out.print("Enter Side A = ");
             String lengthA = scanner.next();
+            double siteA = Double.parseDouble(lengthA);
 
-             try {
-                 double siteA = Double.parseDouble(lengthA);
+            if (siteA <= 0) {
+                try {
+                    throw new InputErrorExeption(siteA);
+                } catch (InputErrorExeption inputErrorExeption) {
+                    System.out.println("Enter a Number > 0 ");
+                    return;
+                }
+            }
+            System.out.print("Enter Side B = ");
+            String lengthB = scanner.next();
+            double siteB = Double.parseDouble(lengthB);
+            if (siteB <= 0) {
+                try {
+                    throw new InputErrorExeption(siteB);
+                        }
+                catch (InputErrorExeption inputErrorExeption) {
+                            System.out.println("Enter a Number > 0 ");
+                            return;
+                        }
+                    }
 
-                 if (siteA <= 0) {
-                     try {
-                         throw new InputErrorExeption(siteA);
-                     } catch (InputErrorExeption inputErrorExeption) {
-                         System.out.println("Enter to Number > 0 ");
-                     }
+                    double areaTriangle = squareShare.areaTriangle(siteA, siteB);
+                    System.out.println("Area of a rectangle = " + areaTriangle);
 
-
-                 }
-                 String lengthB = scanner.next();
-                 double siteB = Double.parseDouble(lengthB);
-                 double areaTriangle = (siteA * siteB) /  2;
-                 System.out.println("Area of a right triangle " + areaTriangle);
-
-             }
-             catch (NumberFormatException ex){
-                 System.out.println("Error, enter to Number");
-             }
-
+            }
+        catch (NumberFormatException ex) {
+            System.out.println("Error, enter a Number");
+            System.exit(0);
+            return;
         }
-
     }
-
-
 }
+
+
         /* Area of a rectangle
         {
             System.out.print("Enter Side A ");
