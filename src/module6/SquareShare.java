@@ -22,13 +22,16 @@ public class SquareShare {
 
         Scanner scanner = new Scanner(System.in);
 
-
         try {
             System.out.print("Enter Side A = ");
             String lengthA = scanner.next();
             double siteA = Double.parseDouble(lengthA);
 
-            if (siteA <= 0) {
+            System.out.print("Enter Side B = ");
+            String lengthB = scanner.next();
+            double siteB = Double.parseDouble(lengthB);
+
+            if (siteA <= 0||siteB<=0) {
                 try {
                     throw new InputErrorExeption(siteA);
                 } catch (InputErrorExeption inputErrorExeption) {
@@ -36,22 +39,8 @@ public class SquareShare {
                     return;
                 }
             }
-            System.out.print("Enter Side B = ");
-            String lengthB = scanner.next();
-            double siteB = Double.parseDouble(lengthB);
-            if (siteB <= 0) {
-                try {
-                    throw new InputErrorExeption(siteB);
-                        }
-                catch (InputErrorExeption inputErrorExeption) {
-                            System.out.println("Enter a Number > 0 ");
-                            return;
-                        }
-                    }
-
-                    double areaTriangle = squareShare.areaTriangle(siteA, siteB);
+                                double areaTriangle = squareShare.areaTriangle(siteA, siteB);
                     System.out.println("Area of a rectangle = " + areaTriangle);
-
             }
         catch (NumberFormatException ex) {
             System.out.println("Error, enter a Number");
@@ -60,8 +49,6 @@ public class SquareShare {
         }
     }
 }
-
-
         /* Area of a rectangle
         {
             System.out.print("Enter Side A ");
