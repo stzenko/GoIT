@@ -49,24 +49,3 @@ public class SquareShare {
         }
     }
 }
-        /* Area of a rectangle
-        {
-            System.out.print("Enter Side A ");
-            String lengthA = scanner.next();
-            System.out.print("Enter Side B ");
-            String lengthB = scanner.next();
-            double areaRectangle = squareShare.areaRectangle(lengthA, lengthB);
-            System.out.println("Area of a rectangle = " + areaRectangle);
-        }
-
-        // Area of a circle
-        {
-        System.out.print("Enter radius circle");
-            String radiusRange = scanner.next();
-            double areaCircle = squareShare.areaCircle(radiusRange);
-        System.out.println("Area of a circle =" + areaCircle);
-
-        }
-    }
-}
-*/
