@@ -7,6 +7,9 @@ package module4.dz4_1;
 import java.util.Scanner;
 
 public class SquareShape {
+
+    public static final int INT_CONST_TRIANGLE = 2;
+
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
@@ -24,7 +27,9 @@ public class SquareShape {
             if (lengthB==0){
                 return ;
             }
-            areaTriangle = (lengthA * lengthB) / 2;
+
+            areaTriangle = (lengthA * lengthB) / INT_CONST_TRIANGLE;
+           // areaTriangle = (lengthA * lengthB) / 2;          // Magic number "2" put in Const
             System.out.println("Area of a right triangle = " + areaTriangle);
 
         }
@@ -60,7 +65,7 @@ public class SquareShape {
             radiusRange = scanner.nextDouble();
             if (radiusRange==0){
                 return ;}
-            areaCircle = Math.PI * Math.pow(radiusRange, 2);
+            areaCircle = Math.PI * Math.pow(radiusRange, INT_CONST_TRIANGLE);
             System.out.println("Area of a circle = " + areaCircle);
         }
         else {

@@ -8,7 +8,7 @@ import java.util.Scanner;
 
 public class TemperatureTransmitter {
     public static void main(String[] args) {
-        final double FAXTOR_FIRST = 1.8, FAXTOR_SECOND = 5d/9d, FACTOR_THIRT=32d;
+        final double FAXTOR_FIRST = 1.8, FAXTOR_SECOND = 5d/9d, FACTOR_THIRT=32d; // Magic number "1.8, 5.d/9d, 32d" put in Const
         Scanner scanner = new Scanner(System.in);
         double temperatureCelcius;
         System.out.print("Enter the temperature in Celsius ");
