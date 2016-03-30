@@ -19,7 +19,6 @@ public class Tube {
 
     @Override
     public String toString() {
-        return "Tube{" + "firm='" + firm + '\'' + ", volume=" + volume + ", color='" + color + '\'' +
-                ", classification='" + classification + '\'' + '}';
+        return ("Tube              " + "\t | \t" + firm + "\t | \t    " + volume + " \t | \t "+ color + "\t | \t"+ classification);
     }
 }

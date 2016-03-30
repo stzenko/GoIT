@@ -18,7 +18,8 @@ package module8;
 
     @Override
     public String toString() {
-        return "Piano{" + "firm='" + firm + '\'' + ", volume=" + volume + ", color='" + color + '\'' +
-                ", classification='" + classification + '\'' + '}';
+      //      ("Type instrument \t | \t Firm \t | \t Volume \t | \t Color \t | \t Classifications \t"	 );
+
+       return ("Piano           " + "\t | \t" + firm + "\t | \t    " + volume + " \t\t | \t "+ color + "\t | \t"+ classification);
     }
 }

@@ -34,12 +34,7 @@ public class Guitar {
 
     @Override
     public String toString() {
-        return "Guitar{" +
-                "firm='" + firm + '\'' +
-                ", volume=" + volume +
-                ", color='" + color + '\'' +
-                ", classification='" + classification + '\'' +
-                '}';
+        return ("Guitar           " + "\t | \t" + firm + "\t | \t    " + volume + " \t\t | \t "+ color + "\t | \t"+ classification );
     }
 }
 
