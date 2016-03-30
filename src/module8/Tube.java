@@ -5,21 +5,19 @@ package module8;
   */
 
 public class Tube extends MusicInstrument{
+    public String nameInstrument;
     public String firm;
     public int volume;
     public String color;
     public String classification;
 
-    public Tube(final String firm, int volume, final String color, final String classification) {
-        super(firm,volume,color,classification);
-        this.firm = firm;
-        this.volume = volume;
-        this.color = color;
-        this.classification = classification;
+    public Tube(final String nameInstrument, final String firm, int volume, final String color, final String classification) {
+        super(nameInstrument,firm,volume,color,classification);
+
     }
 
     @Override
     public String toString() {
-        return ("Tube              " + "\t | \t" + firm + "\t | \t    " + volume + " \t | \t "+ color + "\t | \t"+ classification);
+        return ( nameInstrument  + firm +  volume +  color + classification);
     }
 }
