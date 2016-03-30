@@ -5,11 +5,7 @@ package module8;
   */
 
 public class Tube extends MusicInstrument{
-    public String nameInstrument;
-    public String firm;
-    public int volume;
-    public String color;
-    public String classification;
+
 
     public Tube(final String nameInstrument, final String firm, int volume, final String color, final String classification) {
         super(nameInstrument,firm,volume,color,classification);
