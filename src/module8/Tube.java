@@ -19,7 +19,7 @@ public class Tube {
 
     @Override
     public String toString() {
-        return "Piano{" + "firm='" + firm + '\'' + ", volume=" + volume + ", color='" + color + '\'' +
+        return "Tube{" + "firm='" + firm + '\'' + ", volume=" + volume + ", color='" + color + '\'' +
                 ", classification='" + classification + '\'' + '}';
     }
 }
