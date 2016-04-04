@@ -1,4 +1,4 @@
-package module6;
+package module6.module6_1;
 
 /**
  * Created by Zenovii on 26.03.2016.

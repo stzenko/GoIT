@@ -1,4 +1,4 @@
-package module6;
+package module6.module6_1;
 
 import java.util.Scanner;
 
@@ -9,12 +9,7 @@ public class SquareShare {
     public double areaTriangle(double lengthA, double lengthB) {
         return (lengthA * lengthB) / 2;
     }
-    // public double areaRectangle(double lengthA,double lengthB){
-    //   return  lengthA * lengthB;
-    //   }
-    //  public double areaCircle(double radiusRange){
-    //      return Math.PI*radiusRange;
-    //  }
+
 
     public static void main(String[] args) {
         // Area of a right triangle
