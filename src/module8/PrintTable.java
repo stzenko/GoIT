@@ -7,7 +7,7 @@ import java.util.Collection;
  */
 public class PrintTable {
 
-        static void Print(Collection<MusicInstrument> instrument){
+        static void  print(Collection<MusicInstrument> instrument){
             System.out.println("__________________________________________________________________________________");
             System.out.println("Type instrument  | \t Firm \t\t |  Volume  | \t Color \t\t|\t Classifications  \t");
             System.out.println("__________________________________________________________________________________");
@@ -16,7 +16,11 @@ public class PrintTable {
                 System.out.println(i.nameInstrument + "\t\t\t | "+ i.firm + "\t\t | \t" + i.volume + "\t\t|\t" + i.color + " \t\t|\t"+ i.classification);
             }
             System.out.println("__________________________________________________________________________________");
+
+
+
         }
 
-    }
+
+}
 
