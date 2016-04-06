@@ -47,8 +47,10 @@ public class ShyfrCezarya {
             for (int a = 0; a < ascii.length; a++)
                 if ((originalChar[i] == ascii[a] && ascii[a] < ascii[EnglishBigStart])
                         || (originalChar[i] == ascii[a] && ascii[a] > ascii[EnglishBigFinish] && ascii[a] < ascii[EnglishSmallStart])
-                        || (originalChar[i] == ascii[a] && ascii[a] > ascii[EnglishSmallFinish])){
-                    codedChar[i] = ascii[a];}
+                        || (originalChar[i] == ascii[a] && ascii[a] > ascii[EnglishSmallFinish]))
+                {
+                    codedChar[i] = ascii[a];
+                }
         }
         for (char c : codedChar) {
             cipher.append(c);
@@ -58,6 +60,44 @@ public class ShyfrCezarya {
                 .replace("]", "")
                 .trim();
         return codedString;
+
+    }
+
+    public static String toDeCodeString(String cipher) {
+
+        char[] codedChar = cipher.toString().toCharArray();
+
+        char[] decodedChar = new char[codedChar.length];
+
+        StringBuilder deCipher = new StringBuilder();
+
+        for (int i = 0; i < codedChar.length; i++) {
+            for (int a = 0; a < number; a++) {
+                int cezarDeCipher = (a - crack+number) % number;
+                if (codedChar[i] == ascii[EnglishBigStart + a]) {
+                    decodedChar[i] = ascii[EnglishBigStart + cezarDeCipher];
+                }
+                if (codedChar[i] == ascii[EnglishSmallStart + a]) {
+                    decodedChar[i] = ascii[EnglishSmallStart + cezarDeCipher];
+                }
+            }
+
+            for (int a = 0; a < ascii.length; a++)
+                if ((codedChar[i] == ascii[a] && ascii[a] < ascii[EnglishBigStart])
+                        || (codedChar[i] == ascii[a] && ascii[a] > ascii[EnglishBigFinish] && ascii[a] < ascii[EnglishSmallStart])
+                        || (codedChar[i] == ascii[a] && ascii[a] > ascii[EnglishSmallFinish]))
+                {
+                    decodedChar[i] = ascii[a];
+                }
+        }
+        for (char c : decodedChar) {
+            deCipher.append(c);
+        }
+        String deCodedString = deCipher.toString()
+                .replace("[", "")
+                .replace("]", "")
+                .trim();
+        return deCodedString;
 
     }
 
