@@ -48,6 +48,5 @@ public class  InstrumentExemple {
         System.out.println(musicInstrumentList);
         System.out.println(ShyfrCezarya.toCodeString(musicInstrumentList));
 
-
     }
     }

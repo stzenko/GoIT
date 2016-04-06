@@ -42,7 +42,6 @@ public class ShyfrCezarya {
                 if (originalChar[i] == ascii[EnglishSmallStart + a]) {
                     codedChar[i] = ascii[EnglishSmallStart + cezarCipher];
                 }
-
             }
 
             for (int a = 0; a < ascii.length; a++)
@@ -61,4 +60,6 @@ public class ShyfrCezarya {
         return codedString;
 
     }
+
+
 }
