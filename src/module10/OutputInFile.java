@@ -27,7 +27,7 @@ public class OutputInFile {
 
         Writer writer = null;
             try {
-                writer = new FileWriter("module10.txt");
+                writer = new FileWriter("src\\module10\\module10.doc");
 
                     writer.write(String.valueOf(text+"\n"));
                     writer.write(String.valueOf(code+"\n"));
