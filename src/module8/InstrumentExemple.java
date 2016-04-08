@@ -4,21 +4,24 @@ import module9.ShyfrCezarya;
 
 import java.util.*;
 
-import static module8.PrintTable.print;
+//import static module8.PrintTable.print;
 
 /**
  * Created by Zenovii on 31.03.2016.
  *
  */
 public class  InstrumentExemple {
-    public static void main(String[] args) {
-       InstrumentExemple.printinTable();
 
+    ArrayList<MusicInstrument> musicInstrumentList = new ArrayList<>();
+
+    public ArrayList<MusicInstrument> getMusicInstrumentList() {
+        return musicInstrumentList;
     }
 
-    public static void printinTable(){
-
-        ArrayList<MusicInstrument> musicInstrumentList = new ArrayList<>();
+    public static void main(String[] args) {
+        
+    }
+    public void initInstrumentList(){
 
         Guitar guitar1 = new Guitar("Guitar ", "Counter ", 30, " red", " cord ");
         Guitar guitar2 = new Guitar("Guitar ", "Fusions ",25,"yellow"," cord");
@@ -29,7 +32,9 @@ public class  InstrumentExemple {
         musicInstrumentList.add(guitar2);
         musicInstrumentList.add(piano);
         musicInstrumentList.add(tube);
+    }
 
+    public void printinTable(){
 
         PrintTable.print(musicInstrumentList);
 
