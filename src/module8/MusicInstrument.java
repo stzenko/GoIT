@@ -19,4 +19,9 @@ package module8;
         this.classification = classification;
     }
     public abstract String toString();
+
+
+    public int getBytes() {
+        return 0;
+    }
 }

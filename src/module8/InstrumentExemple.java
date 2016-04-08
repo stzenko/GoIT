@@ -30,6 +30,7 @@ public class  InstrumentExemple {
         musicInstrumentList.add(piano);
         musicInstrumentList.add(tube);
 
+
         PrintTable.print(musicInstrumentList);
 
         Set<MusicInstrument> sortedFirmList = new TreeSet<>((o1, o2) -> o1.firm.compareTo(o2.firm));

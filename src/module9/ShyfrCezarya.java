@@ -43,7 +43,6 @@ public class ShyfrCezarya {
                     codedChar[i] = ascii[EnglishSmallStart + cezarCipher];
                 }
             }
-
             for (int a = 0; a < ascii.length; a++)
                 if ((originalChar[i] == ascii[a] && ascii[a] < ascii[EnglishBigStart])
                         || (originalChar[i] == ascii[a] && ascii[a] > ascii[EnglishBigFinish] && ascii[a] < ascii[EnglishSmallStart])
@@ -60,7 +59,6 @@ public class ShyfrCezarya {
                 .replace("]", "")
                 .trim();
         return codedString;
-
     }
 
     public static String toDeCodeString(String cipher) {
@@ -81,7 +79,6 @@ public class ShyfrCezarya {
                     decodedChar[i] = ascii[EnglishSmallStart + cezarDeCipher];
                 }
             }
-
             for (int a = 0; a < ascii.length; a++)
                 if ((codedChar[i] == ascii[a] && ascii[a] < ascii[EnglishBigStart])
                         || (codedChar[i] == ascii[a] && ascii[a] > ascii[EnglishBigFinish] && ascii[a] < ascii[EnglishSmallStart])
@@ -98,8 +95,5 @@ public class ShyfrCezarya {
                 .replace("]", "")
                 .trim();
         return deCodedString;
-
     }
-
-
 }

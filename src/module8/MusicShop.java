@@ -8,12 +8,16 @@ import java.util.List;
  */
         public class MusicShop {
 
+    public List<MusicInstrument> getMusicInstrumentList() {
+        return musicInstrumentList;
+    }
+
     List<MusicInstrument> musicInstrumentList = new ArrayList<>();
+
 
    public void musicInstrumentList(MusicInstrument musicInstrument) {
        musicInstrumentList.add(musicInstrument);
    }
-
 
 }
 
