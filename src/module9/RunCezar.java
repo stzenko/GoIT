@@ -9,6 +9,6 @@ public class RunCezar {
     public static void main(String[] args) {
         MusicShop musicShop = new MusicShop();
         musicShop.initShop();
-        musicShop.shyfrCezarya();
+        musicShop.shyfrCezarya( );
     }
 }
