@@ -4,7 +4,7 @@ import module9.ShyfrCezarya;
 
 import java.util.*;
 
-//import static module8.PrintTable.print;
+import static module8.PrintTable.print;
 
 /**
  * Created by Zenovii on 31.03.2016.
@@ -12,48 +12,10 @@ import java.util.*;
  */
 public class  InstrumentExemple {
 
-    ArrayList<MusicInstrument> musicInstrumentList = new ArrayList<>();
-
-    public ArrayList<MusicInstrument> getMusicInstrumentList() {
-        return musicInstrumentList;
-    }
-
     public static void main(String[] args) {
-        
+
+        MusicShop musicShop = new MusicShop();
+        musicShop.initShop();
+        musicShop.printinTable();
     }
-    public void initInstrumentList(){
-
-        Guitar guitar1 = new Guitar("Guitar ", "Counter ", 30, " red", " cord ");
-        Guitar guitar2 = new Guitar("Guitar ", "Fusions ",25,"yellow"," cord");
-        Piano piano = new Piano("Piano", " Forte ",75," black"," key");
-        Tube tube = new Tube("Tube"," Porto ",125," gold"," spiritual");
-
-        musicInstrumentList.add(guitar1);
-        musicInstrumentList.add(guitar2);
-        musicInstrumentList.add(piano);
-        musicInstrumentList.add(tube);
-    }
-
-    public void printinTable(){
-
-        PrintTable.print(musicInstrumentList);
-
-        Set<MusicInstrument> sortedFirmList = new TreeSet<>((o1, o2) -> o1.firm.compareTo(o2.firm));
-
-        sortedFirmList.addAll(musicInstrumentList);
-
-        System.out.println("\n Sorted by Firm:");
-        PrintTable.print(sortedFirmList);
-
-        Set<MusicInstrument> sortedVolume = new TreeSet<>((o1, o2) -> o1.volume - o2.volume);
-        sortedVolume.addAll(musicInstrumentList);
-        System.out.println("\n Sorted by Volume:");
-        PrintTable.print(sortedVolume);
-
-        System.out.println("Collection" + musicInstrumentList);
-        System.out.println("Cipher    [" + ShyfrCezarya.toCodeString(musicInstrumentList)+"]");
-        System.out.println("Decipher  [" + ShyfrCezarya.toDeCodeString(ShyfrCezarya.toCodeString(musicInstrumentList))+"]");
-
-
-    }
-    }
+}

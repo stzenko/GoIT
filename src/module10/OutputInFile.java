@@ -2,6 +2,7 @@ package module10;
 
 
 import module8.*;
+import module9.ShyfrCezarya;
 
 import java.io.FileWriter;
 import java.io.IOException;
@@ -17,15 +18,22 @@ import java.util.logging.Logger;
 public class OutputInFile {
     public static void main(String[] args) throws Exception {
         MusicShop musicShop = new MusicShop();
+        musicShop.initShop();
 
-            List<String> musicInstrumentList = new ArrayList<>();
-            Writer writer = null;
+        ArrayList <MusicInstrument> musicInstrument = musicShop.getMusicInstrument();
+        String text = musicInstrument.toString();
+        String code = ShyfrCezarya.toCodeString(musicInstrument);
+        String decode = ShyfrCezarya.toDeCodeString(ShyfrCezarya.toCodeString(musicInstrument));
+
+        Writer writer = null;
             try {
-                writer = new FileWriter("fil1e.txt");
-                for (String line : musicInstrumentList) {
-                    writer.write(line);
+                writer = new FileWriter("module10.txt");
+
+                    writer.write(String.valueOf(text+"\n"));
+                    writer.write(String.valueOf(code+"\n"));
+                    writer.write(String.valueOf(decode+"\n"));
                     writer.write(System.getProperty("line.separator"));
-                }
+
                 writer.flush();
             } catch (Exception e) {
                 Logger.getLogger(InstrumentExemple.class.getName()).log(Level.SEVERE, null, e);
@@ -36,8 +44,8 @@ public class OutputInFile {
                     } catch (IOException ex) {
                     }
                 }
-            }
         }
     }
+}
 
 

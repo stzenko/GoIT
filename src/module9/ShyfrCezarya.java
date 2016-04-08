@@ -55,8 +55,8 @@ public class ShyfrCezarya {
             cipher.append(c);
         }
         String codedString = cipher.toString()
-                .replace("[", "")
-                .replace("]", "")
+                .replace("", "")
+                .replace("", "")
                 .trim();
         return codedString;
     }
@@ -91,8 +91,8 @@ public class ShyfrCezarya {
             deCipher.append(c);
         }
         String deCodedString = deCipher.toString()
-                .replace("[", "")
-                .replace("]", "")
+                .replace("", "")
+                .replace("", "")
                 .trim();
         return deCodedString;
     }
