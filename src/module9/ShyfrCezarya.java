@@ -25,7 +25,8 @@ public class ShyfrCezarya {
         }
     }
 
-    public static String toCodeString(ArrayList<MusicInstrument> instruments) {
+    //public static String toCodeString(ArrayList<MusicInstrument> instruments) {
+        public static String toCodeString( String instruments) {
         asciiCod();
         char[] originalChar = instruments.toString().toCharArray();
 

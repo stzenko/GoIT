@@ -46,7 +46,7 @@ import java.util.TreeSet;
     }
         public  void shyfrCezarya() {
             System.out.println("Collection" + getMusicInstrument());
-            System.out.println("Cipher    " + ShyfrCezarya.toCodeString(getMusicInstrument()));
-            System.out.println("Decipher  " + ShyfrCezarya.toDeCodeString(ShyfrCezarya.toCodeString(getMusicInstrument())) );
+          //  System.out.println("Cipher    " + ShyfrCezarya.toCodeString(getMusicInstrument()));
+          //  System.out.println("Decipher  " + ShyfrCezarya.toDeCodeString(ShyfrCezarya.toCodeString(getMusicInstrument())) );
         }
     }
