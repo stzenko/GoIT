@@ -15,8 +15,6 @@ import java.util.logging.Logger;
 
 public class InOutPutStream {
 
-    private static final String FILE_NAME_INPUT = "src\\module10\\norm.txt";
-
     public static String readFromFile(String fileName) throws IOException {
         BufferedReader br = new BufferedReader(new FileReader(new File(fileName)));
         String str = null;
@@ -30,16 +28,15 @@ public class InOutPutStream {
         return sb.toString();
     }
 
-    public static String writer() throws IOException {
+    public static String writer(String FILE_NAME_INPUT ) throws IOException {
         String in = readFromFile(FILE_NAME_INPUT).toString();
         String code = ShyfrCezarya.toCodeString(in);
         String decode = ShyfrCezarya.toCodeString(ShyfrCezarya.toDeCodeString(in));
 
         Writer writer = null;
         try {
-            writer = new FileWriter("src\\module10\\module10.txt");
+            writer = new FileWriter("src\\main\\module10\\module10.txt");
 
-            writer.write(String.valueOf(in + "\n"));
             writer.write(String.valueOf(code + "\n"));
             writer.write("\n");
             writer.write(String.valueOf(decode + "\n"));
@@ -60,7 +57,3 @@ public class InOutPutStream {
         return in.toString();
     }
 }
-
-
-
-
