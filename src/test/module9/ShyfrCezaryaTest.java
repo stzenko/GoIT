@@ -32,9 +32,7 @@ public class ShyfrCezaryaTest {
     public void toDeCodeStringTest() throws Exception {
         String text = "Love is";
         final String code = shyfrCezarya.toCodeString(text);
-
         String decode = ShyfrCezarya.toCodeString(ShyfrCezarya.toDeCodeString(text));
-
         Assert.assertEquals("Love is",decode);
 
     }

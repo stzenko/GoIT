@@ -26,7 +26,6 @@ public class InOutPutStreamTest {
         final String loading = inOutPutStream.readFromFile(fileName);
         Assert.assertEquals(load,loading);
 
-
-    }
+            }
 
 }
