@@ -34,7 +34,7 @@ public class FactorialTest {
     }
     @Test(expected = LimitException.class)
     public void LimitNumberTest() throws Exception {
-        final int a = 175;
+        final int a=175;
         factorial.checkInteger(a);
     }
   //  @Test(expected = IllegalNumberException.class)
