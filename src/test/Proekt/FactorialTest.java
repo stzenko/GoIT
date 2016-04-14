@@ -1,7 +1,7 @@
 package test.Proekt;
 
 import main.Proekt.Factorial;
-import main.Proekt.IllegalNumberException;
+
 import main.Proekt.LimitException;
 import main.Proekt.NegativeIntegerException;
 import org.junit.Assert;
@@ -21,24 +21,35 @@ public class FactorialTest {
     }
 
     @Test
-    public void factorialTestPositiveTest() throws Exception {
-        final int a = 5;
-        final double result = factorial.getFactorial(a);
-        Assert.assertEquals(120,result,0);
+    public void testFactorialPositive() throws Exception {
+        final String a = "5";
+        final  double result = factorial.getFactorial(a);
+        int res = Integer.valueOf((int) result);
+       Assert.assertEquals(120,res);
+    }
+
+    @Test(expected = LimitException.class)
+    public void testMaxLimitNumber() throws Exception {
+        final String a="175";
+        factorial.connectUser(a);
     }
 
     @Test(expected = NegativeIntegerException.class)
-    public void NegativeNumberTest() throws Exception {
-        final int a = -1;
-        factorial.checkInteger(a);
+    public void testNegativeNumber() throws Exception {
+        final String a = "-1";
+        factorial.connectUser(a);
     }
-    @Test(expected = LimitException.class)
-    public void LimitNumberTest() throws Exception {
-        final int a=175;
-        factorial.checkInteger(a);
+
+    @Test(expected = NumberFormatException.class)
+    public void testStringNumberFormat() throws Exception {
+       final String a="s";
+        factorial.connectUser(a);
     }
-  //  @Test(expected = IllegalNumberException.class)
-  //  public void IllegalNumberTest() throws Exception {
-    //    factorial.connectUser();
-   // }
+
+    @Test(expected = NumberFormatException.class)
+    public void testDoubleNumberFormat() throws Exception {
+        final String a="5.5";
+        factorial.connectUser(a);
+    }
+
 }

@@ -5,63 +5,52 @@ import java.util.Scanner;
 public class Factorial {
 
     public static void main(String[] args) {
-        Factorial item = new Factorial();
-        item.start();
-    }
 
-    public void start() {
+        Scanner in = new Scanner(System.in);
+        System.out.println("Enter a number from 1 to 170");
+        String a= in.next();
+
+            start(a);
+        }
+
+    public static void start(String a) {
 
         try {
-            int enteredInteger = connectUser();
-            long result = getFactorial(enteredInteger);
-            System.out.println("Factorial of " + enteredInteger + " = " + result);
-        } catch (IllegalNumberException ine) {
-            System.out.println("[Error]: Entered data isn't integer.");
+            connectUser(a);
+            double result = getFactorial(a);
+
+            System.out.println("Factorial of " +  a + " = " + result);
+        }
+        catch (NumberFormatException ine) {
+                System.out.println("[Error]: Entered data isn't integer.");
         } catch (NegativeIntegerException nie) {
             System.out.println("[Error]: Entered number is " + nie.getValue() + ". Number should " +
-                    "be" + " > 0.");
+                    "be" + " >= 1 .");
         } catch (LimitException ex) {
             System.out.println("[Error]: Entered number is " + ex.getValue() + ". Number should " +
-                    "be" + " <= 20 .");
+                    "be" + " <= 170 .");
         }
     }
 
-    public int connectUser() throws IllegalNumberException, NegativeIntegerException, LimitException {
-        int enteredInteger;
-        try (Scanner in = new Scanner(System.in)) {
-            System.out.println("Enter positive integer <= 20");
-            if (!in.hasNextInt()) {
-                throw new IllegalNumberException();
-            }
-            enteredInteger = in.nextInt();
-            checkInteger(enteredInteger);
+    public static String connectUser(String a2) throws NumberFormatException,  NegativeIntegerException, LimitException {
+
+        Integer i2 = Integer.valueOf(String.valueOf(a2));
+        if (i2 < 1) {
+            throw new NegativeIntegerException(i2);
         }
-        return enteredInteger;
+        if (i2 > 170) {
+            throw new LimitException(i2);
+        }
+        return a2;
     }
 
-    public int checkInteger(int enteredInteger) throws NegativeIntegerException, LimitException {
-        if (enteredInteger < 1) {
-            throw new NegativeIntegerException(enteredInteger);
+    public static Double getFactorial(String number) {
+        double result = 1;
+        Integer in = Integer.valueOf(number);
+        for (int i = 1; i <= in; i++) {
+            result *= i;
         }
-        if (enteredInteger > 20) {
-            throw new LimitException(enteredInteger);
-        }
-        return enteredInteger;
-    }
-
-    public long getFactorial(int positiveInteger) {
-        long result = 1;
-
-        if(positiveInteger>=0) {
-
-            for (int i = 1; i <= positiveInteger; i++) {
-                result *= i;
-            }
-        }
-        else {
-            result = 0;
-        }
-            return result;
+        return result;
     }
 
 }
