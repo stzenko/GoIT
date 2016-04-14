@@ -9,7 +9,6 @@ public class Factorial {
         Scanner in = new Scanner(System.in);
         System.out.println("Enter a number from 1 to 170");
         String a= in.next();
-
             start(a);
         }
 
@@ -52,5 +51,4 @@ public class Factorial {
         }
         return result;
     }
-
 }
