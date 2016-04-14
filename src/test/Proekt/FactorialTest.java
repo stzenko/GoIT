@@ -23,20 +23,18 @@ public class FactorialTest {
     @Test
     public void factorialTestPositiveTest() throws Exception {
         final int a = 5;
-        final long result = factorial.getFactorial(a);
-        Assert.assertEquals(120,result);
-    }
-    @Test
-    public void factorialTestNegativeTest()  {
-
-        final int a = -5;
-        final long result = factorial.getFactorial(a);
-        Assert.assertEquals(0,result);
+        final double result = factorial.getFactorial(a);
+        Assert.assertEquals(120,result,0);
     }
 
+    @Test(expected = NegativeIntegerException.class)
+    public void NegativeNumberTest() throws Exception {
+        final int a = -1;
+        factorial.checkInteger(a);
+    }
     @Test(expected = LimitException.class)
     public void LimitNumberTest() throws Exception {
-        final int a = 21;
+        final int a = 175;
         factorial.checkInteger(a);
     }
   //  @Test(expected = IllegalNumberException.class)
