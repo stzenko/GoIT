@@ -31,25 +31,25 @@ public class FactorialTest {
     @Test(expected = LimitException.class)
     public void testMaxLimitNumber() throws Exception {
         final String a="175";
-        factorial.connectUser(a);
+        factorial.checkInteger(a);
     }
 
     @Test(expected = NegativeIntegerException.class)
     public void testNegativeNumber() throws Exception {
         final String a = "-1";
-        factorial.connectUser(a);
+        factorial.checkInteger(a);
     }
 
     @Test(expected = NumberFormatException.class)
     public void testStringNumberFormat() throws Exception {
        final String a="s";
-        factorial.connectUser(a);
+        factorial.checkInteger(a);
     }
 
     @Test(expected = NumberFormatException.class)
     public void testDoubleNumberFormat() throws Exception {
         final String a="5.5";
-        factorial.connectUser(a);
+        factorial.checkInteger(a);
 
     }
 }

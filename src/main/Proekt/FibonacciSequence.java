@@ -11,7 +11,6 @@ public class FibonacciSequence {
         System.out.println("Enter a number");
         String a= in.next();
         start(a);
-
     }
 
     public static void start(String a)  {
