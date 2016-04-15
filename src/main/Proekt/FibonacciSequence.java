@@ -24,7 +24,7 @@ public class FibonacciSequence {
             System.out.println("[Error]: Entered data isn't integer.");
         } catch (NegativeIntegerException nie) {
             System.out.println("[Error]: Entered number is " + nie.getValue() + ". Number should " +
-                    "be" + " > 0.");
+                    "be" + " >= 1. ");
         }
     }
 
@@ -39,7 +39,7 @@ public class FibonacciSequence {
     public static List<Integer> getFibSeq(String limit) {
         Integer in = Integer.valueOf(limit);
         List<Integer> sequence = new ArrayList<>();
-        sequence.add(1);
+        sequence.add(0);
         sequence.add(1);
 
         for (int i = 2; sequence.get(i - 1) + sequence.get(i - 2) < in; i++) {
