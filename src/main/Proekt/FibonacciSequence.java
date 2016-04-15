@@ -5,7 +5,7 @@ import java.util.List;
 import java.util.Scanner;
 
 public class FibonacciSequence {
-    public static void main(String[] args) throws NegativeIntegerException, NumberFormatException{
+    public static void main(String[] args) {
 
         Scanner in = new Scanner(System.in);
         System.out.println("Enter a number");
@@ -14,7 +14,7 @@ public class FibonacciSequence {
 
     }
 
-    public static void start(String a) throws NegativeIntegerException, NumberFormatException {
+    public static void start(String a)  {
 
         try {
         checkInteger(a);
@@ -29,7 +29,7 @@ public class FibonacciSequence {
     }
 
     public static String checkInteger(String a) throws NegativeIntegerException, NumberFormatException{
-        Integer i = Integer.valueOf(String.valueOf(a));
+        Integer i = Integer.valueOf(a);
         if (i < 1) {
             throw new NegativeIntegerException(i);
         }
@@ -39,7 +39,8 @@ public class FibonacciSequence {
     public static List<Integer> getFibSeq(String limit) {
         Integer in = Integer.valueOf(limit);
         List<Integer> sequence = new ArrayList<>();
-        sequence.add(0);
+
+        sequence.add(1);
         sequence.add(1);
 
         for (int i = 2; sequence.get(i - 1) + sequence.get(i - 2) < in; i++) {
