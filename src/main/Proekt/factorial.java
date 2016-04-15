@@ -31,21 +31,21 @@ public class Factorial {
         }
     }
 
-    public static String connectUser(String a2) throws NumberFormatException,  NegativeIntegerException, LimitException {
+    public static String connectUser(String a) throws NumberFormatException,  NegativeIntegerException, LimitException {
 
-        Integer i2 = Integer.valueOf(String.valueOf(a2));
-        if (i2 < 1) {
-            throw new NegativeIntegerException(i2);
+        Integer i = Integer.valueOf(a);
+        if (i < 1) {
+            throw new NegativeIntegerException(i);
         }
-        if (i2 > 170) {
-            throw new LimitException(i2);
+        if (i > 170) {
+            throw new LimitException(i);
         }
-        return a2;
+        return a;
     }
 
-    public static Double getFactorial(String number) {
+    public static Double getFactorial(String a) {
         double result = 1;
-        Integer in = Integer.valueOf(number);
+        Integer in = Integer.valueOf(a);
         for (int i = 1; i <= in; i++) {
             result *= i;
         }
