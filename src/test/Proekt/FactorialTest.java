@@ -23,7 +23,6 @@ public class FactorialTest {
     @Test
     public void testFactorialPositive(){
         final String a = "5";
-
         final  double result = factorial.getFactorial(a);
 
        Assert.assertEquals(120,result,0);
