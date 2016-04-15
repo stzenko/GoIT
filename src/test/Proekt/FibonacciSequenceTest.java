@@ -22,7 +22,7 @@ public class FibonacciSequenceTest {
     private static FibonacciSequence fibonacciSequence;
 
     @BeforeClass
-    public static void setUp() throws Exception {
+    public static void setUp() {
     fibonacciSequence= new FibonacciSequence();
     }
 
@@ -49,9 +49,10 @@ public class FibonacciSequenceTest {
     }
 
     @Test
-    public void testGetFibSeq() throws Exception {
+    public void testGetFibSeq()  {
         String number = "5";
         final List<Integer> result  = fibonacciSequence.getFibSeq(number);
+
         List<Integer> s = new ArrayList<>();
 
         s.add(1);
