@@ -16,16 +16,17 @@ public class FactorialTest {
     private static Factorial factorial;
 
     @BeforeClass
-    public static void setUp() throws Exception {
+    public static void setUp() {
         factorial = new Factorial();
     }
 
     @Test
-    public void testFactorialPositive() throws Exception {
+    public void testFactorialPositive(){
         final String a = "5";
+
         final  double result = factorial.getFactorial(a);
-        int res = Integer.valueOf((int) result);
-       Assert.assertEquals(120,res);
+
+       Assert.assertEquals(120,result,0);
     }
 
     @Test(expected = LimitException.class)
@@ -50,6 +51,6 @@ public class FactorialTest {
     public void testDoubleNumberFormat() throws Exception {
         final String a="5.5";
         factorial.connectUser(a);
-    }
 
+    }
 }

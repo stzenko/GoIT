@@ -47,9 +47,7 @@ public class FibonacciSequence {
             sequence.add(i, sequence.get(i - 1) + sequence.get(i - 2));
         }
         return sequence;
-
     }
-
 }
 
 
