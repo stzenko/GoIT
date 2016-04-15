@@ -9,16 +9,16 @@ public class FibonacciSequence {
 
         Scanner in = new Scanner(System.in);
         System.out.println("Enter a number");
-        String a= in.next();
-        start(a);
+        String number= in.next();
+        start(number);
     }
 
-    public static void start(String a)  {
+    public static void start(String number)  {
 
         try {
-        checkInteger(a);
-            List<Integer> result = getFibSeq(a);
-            System.out.println("Fibonacci sequence < " + a + " = " + result);
+        checkInteger(number);
+            List<Integer> result = getFibSeq(number);
+            System.out.println("Fibonacci sequence < " + number + " = " + result);
         } catch (NumberFormatException nfe) {
             System.out.println("[Error]: Entered data isn't integer.");
         } catch (NegativeIntegerException nie) {
@@ -27,12 +27,12 @@ public class FibonacciSequence {
         }
     }
 
-    public static String checkInteger(String a) throws NegativeIntegerException, NumberFormatException{
-        Integer i = Integer.valueOf(a);
+    public static String checkInteger(String number) throws NegativeIntegerException, NumberFormatException{
+        Integer i = Integer.valueOf(number);
         if (i < 1) {
             throw new NegativeIntegerException(i);
         }
-        return a;
+        return number;
     }
 
     public static List<Integer> getFibSeq(String limit) {
@@ -48,5 +48,3 @@ public class FibonacciSequence {
         return sequence;
     }
 }
-
-

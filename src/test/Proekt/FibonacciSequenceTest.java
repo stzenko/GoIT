@@ -32,20 +32,20 @@ public class FibonacciSequenceTest {
 
     @Test(expected = NumberFormatException.class)
     public void testStringNumberFormat() throws Exception {
-        final String a="s";
-        fibonacciSequence.checkInteger(a);
+        final String number= "s";
+        fibonacciSequence.checkInteger(number);
     }
 
     @Test(expected = NumberFormatException.class)
     public void testDoubleNumberFormat() throws Exception {
-        final String a="5.5";
-        fibonacciSequence.checkInteger(a);
+        final String number="5.5";
+        fibonacciSequence.checkInteger(number);
     }
 
        @Test(expected = NegativeIntegerException.class)
     public void testMaxLimitNumber() throws Exception {
-        final String a="-5";
-        fibonacciSequence.checkInteger(a);
+        final String number="-5";
+        fibonacciSequence.checkInteger(number);
     }
 
     @Test
@@ -53,13 +53,13 @@ public class FibonacciSequenceTest {
         String number = "5";
         final List<Integer> result  = fibonacciSequence.getFibSeq(number);
 
-        List<Integer> s = new ArrayList<>();
+        List<Integer> sequence = new ArrayList<>();
 
-        s.add(1);
-        s.add(1);
-        s.add(2);
-        s.add(3);
+        sequence.add(1);
+        sequence.add(1);
+        sequence.add(2);
+        sequence.add(3);
 
-        Assert.assertEquals(s,result);
+        Assert.assertEquals(sequence,result);
     }
 }
