@@ -6,19 +6,19 @@ public class Factorial {
 
     public static void main(String[] args) {
 
-        Scanner in = new Scanner(System.in);
+        Scanner scanner = new Scanner(System.in);
         System.out.println("Enter a number from 1 to 170");
-        String a= in.next();
-            start(a);
+        String number= scanner.next();
+            start(number);
         }
 
-    public static void start(String a) {
+    public static void start(String number) {
 
         try {
-            connectUser(a);
-            double result = getFactorial(a);
+            checkInteger(number);
+            double result = getFactorial(number);
 
-            System.out.println("Factorial of " +  a + " = " + result);
+            System.out.println("Factorial of " +  number + " = " + result);
         }
         catch (NumberFormatException ine) {
                 System.out.println("[Error]: Entered data isn't integer.");
@@ -31,21 +31,20 @@ public class Factorial {
         }
     }
 
-    public static String connectUser(String a) throws NumberFormatException,  NegativeIntegerException, LimitException {
+    public static void checkInteger(String number) throws NumberFormatException,  NegativeIntegerException, LimitException {
 
-        Integer i = Integer.valueOf(a);
+        Integer i = Integer.valueOf(number);
         if (i < 1) {
             throw new NegativeIntegerException(i);
         }
         if (i > 170) {
             throw new LimitException(i);
         }
-        return a;
     }
 
-    public static Double getFactorial(String a) {
+    public static Double getFactorial(String number) {
         double result = 1;
-        Integer in = Integer.valueOf(a);
+        Integer in = Integer.valueOf(number);
         for (int i = 1; i <= in; i++) {
             result *= i;
         }
