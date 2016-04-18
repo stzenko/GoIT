@@ -20,7 +20,7 @@ public class Window extends JFrame {
         window.seqButton();
     }
 
-    public Window() {
+    private Window() {
 
         setDefaultCloseOperation(EXIT_ON_CLOSE);
         setLocationRelativeTo(null);
@@ -37,7 +37,7 @@ public class Window extends JFrame {
     }
 
 
-    public void descriptionField() {
+    private void descriptionField() {
         JPanel descriptionPanel = new JPanel();
         add(descriptionPanel);
         JLabel descriptionField = new JLabel("<html>The program is designed to calculate the factorial" +
@@ -49,7 +49,7 @@ public class Window extends JFrame {
         descriptionPanel.add(descriptionField);
     }
 
-    public void seqButton() {
+    private void seqButton() {
         JButton findButton = new JButton("Calculate!");
         add(fibSeqButton,
                 new GridBagConstraints(0, 2, 1, 1, 0.0, 0.9, GridBagConstraints.NORTH,
@@ -70,8 +70,7 @@ public class Window extends JFrame {
     }
 
 
-    public class findButtonActionListener implements ActionListener {
-
+    private class findButtonActionListener implements ActionListener {
 
         @Override
         public void actionPerformed(ActionEvent e) {
@@ -100,7 +99,7 @@ public class Window extends JFrame {
             }
         }
 
-        public String results(String message) {
+        private String results(String message) {
             String result = null;
             JOptionPane.showMessageDialog(dialogJPanel, message, result, JOptionPane
                     .DEFAULT_OPTION);
