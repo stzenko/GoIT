@@ -28,7 +28,6 @@ public class Window extends JFrame {
         setTitle("Fibonacci and Factorial");
         setResizable(false);
 
-
         fibSeqButton = new JRadioButton("Fibonacci Sequence", false);
         factorialButton = new JRadioButton("Factorial", true);
         group.add(fibSeqButton);
@@ -49,6 +48,7 @@ public class Window extends JFrame {
                         GridBagConstraints.HORIZONTAL, new Insets(10, 5, 5, 3), 0, 0));
         descriptionPanel.add(descriptionField);
     }
+
     public void seqButton() {
         JButton findButton = new JButton("Calculate!");
         add(fibSeqButton,
@@ -125,6 +125,5 @@ public class Window extends JFrame {
                         , "Result", JOptionPane.DEFAULT_OPTION);
             }
         }
-
     }
 }
