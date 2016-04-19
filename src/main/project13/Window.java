@@ -63,14 +63,14 @@ public class Window extends JFrame {
         add(findButton,
                 new GridBagConstraints(0, 5, 1, 1, 0.0, 0.9, GridBagConstraints.CENTER,
                         GridBagConstraints.HORIZONTAL, new Insets(12, 5, 5, 3), 0, 0));
-        findButton.addActionListener(new findButtonActionListener());
+        findButton.addActionListener(new FindButtonActionListener());
 
         setVisible(true);
         pack();
     }
 
 
-    private class findButtonActionListener implements ActionListener {
+    private class FindButtonActionListener implements ActionListener {
 
         @Override
         public void actionPerformed(ActionEvent e) {
@@ -100,7 +100,7 @@ public class Window extends JFrame {
         }
 
         private String results(String message) {
-            String result = null;
+            String result = "Error";
             JOptionPane.showMessageDialog(dialogJPanel, message, result, JOptionPane
                     .DEFAULT_OPTION);
             return message;
